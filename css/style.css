@@ -84,11 +84,7 @@ h6 {
 	max-width: 100%;
 	min-height: 100%;
 
-	background-image: url(../img/background.webp);
-	background-repeat: no-repeat;
-	background-position: center;
-	background-size: cover;
-	background-attachment: fixed;
+	background-image: url(../img/background.png);
 
 	position: relative;
 }
@@ -99,6 +95,7 @@ h6 {
 	width: 100%;
 	height: 100%;
 
+	background-color: rgba(30, 30, 30, 0.2);
 	position: absolute;
 	z-index: 1;
 	top: 0;
@@ -111,7 +108,8 @@ h6 {
 	max-width: 100%;
 	min-height: 100vh;
 
-	background-color: rgb(80, 80, 80);
+
+
 	font-family: 'Montserrat', sans-serif;
 	color: rgb(255, 255, 255);
 
@@ -311,8 +309,10 @@ h6 {
 
 /* основной контент */
 .content {
-	position: relative;
 	padding: 50px 15px;
+	display: grid;
+	justify-content: center;
+	align-content: center;
 }
 
 .practical-works {
@@ -331,24 +331,25 @@ h6 {
 
 .practical-works__subtitle {
 	position: absolute;
-	top: 40px;
-	left: 25px;
+	top: 12%;
+	left: 8%;
 	z-index: 4;
-	font-size: 32px;
+	font-size: 40px;
 	font-weight: 700;
-	color: rgb(255, 255, 255);
+	color: rgb(217, 230, 78);
+	text-shadow: 0.5px 0.5px 20px white;
 	font-family: 'Roboto Slab', serif;
-	letter-spacing: 1.4px;
+	letter-spacing: 1.1px;
 }
 
 .practical-works__image {
 	position: absolute;
-	top: -50px;
-	left: 3%;
+	top: 50%;
+	left: 10%;
 	z-index: 2;
-	width: 450px;
-	height: 450px;
-	margin: 0 0 0 0;
+	width: 60vh;
+	height: 60vh;
+	margin: -30vh 0 0 0;
 }
 
 .practical-works__image::after {
@@ -359,7 +360,7 @@ h6 {
 	z-index: 3;
 	width: 100%;
 	height: 100%;
-	background-color: rgba(43, 43, 43, 0.2);
+	background-color: rgba(43, 43, 43, 0.4);
 }
 
 .element {
@@ -628,15 +629,6 @@ h6 {
 		font-size: 36px;
 	}
 
-	.practical-works-cards {
-		display: grid;
-		grid-template-columns: 1fr;
-		justify-items: center;
-		gap: 30px;
-		position: relative;
-		z-index: 3;
-	}
-
 	.footer {
 		gap: 30px;
 		grid-template-columns: repeat(3, auto);
@@ -651,7 +643,24 @@ h6 {
 	}
 }
 
+@media (max-width: 1080px) {
+	.practical-works__image {
+		display: none;
+	}
+
+	.practical-works-cards {
+		display: grid;
+		grid-template-columns: 1fr;
+		justify-items: center;
+		gap: 30px;
+		position: relative;
+		z-index: 3;
+	}
+}
+
 @media (max-width: 870px) {
+
+
 
 	.header {
 		grid-template-columns: auto;
@@ -668,12 +677,7 @@ h6 {
 	}
 
 	.page-content {
-		background-color: rgb(100, 100, 100);
 		grid-template-rows: minmax(200px, auto) 1fr minmax(150px, auto);
-	}
-
-	.practical-works__image {
-		display: none;
 	}
 
 	.footer {
