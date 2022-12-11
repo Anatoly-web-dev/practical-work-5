@@ -336,8 +336,8 @@ h6 {
 	z-index: 4;
 	font-size: 40px;
 	font-weight: 700;
-	color: rgb(217, 230, 78);
-	text-shadow: 0.5px 0.5px 20px white;
+	color: rgb(235, 255, 18);
+	text-shadow: 1.5px 1.5px 50px rgb(255, 255, 255);
 	font-family: 'Roboto Slab', serif;
 	letter-spacing: 1.1px;
 }
@@ -378,9 +378,7 @@ h6 {
 	top: 100px;
 	left: 0;
 	z-index: 4;
-	width: 150px;
-	height: 200px;
-	opacity: 0.5;
+	opacity: 0.4;
 }
 
 .card {
