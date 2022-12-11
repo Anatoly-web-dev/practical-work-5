@@ -123,7 +123,7 @@ h6 {
 
 .header-container {
 	position: relative;
-	background-image: url(../img/header-background.png);
+	background-image: url(../img/header-background.webp);
 	background-position: center;
 	background-repeat: no-repeat;
 	background-size: cover;

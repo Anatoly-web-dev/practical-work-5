@@ -24,7 +24,7 @@
 
 Разработан в качестве практического задания на курсе *SkillFactory* **'Профессия Веб-разработчик'**.
 
-![news-logo](./img/calculator-logo.png)
+![news-logo](./img/for-readme.png)
 
 ## Используемые технологии
 
