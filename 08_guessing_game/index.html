@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta name="description" content="Практическая работа на курсе 'Веб-Разроботчик' SkillFactory. Игра 'Угадайка!'">
+	<meta name="keywords"
+		content="Обучение, SkillFactory, JavaScript, практическая работа, базовый frontend, Игра 'Угадайка!'">
+	<meta name="author" content="Анатолий Кострыкин">
+	<meta name="copyright" content="Анатолий Кострыкин">
+	<meta property="og:locale" content="ru_RU">
+	<meta property="og:type" content="article">
+	<meta property="og:title" content="Игра 'Угадайка!'">
+	<meta property="og:description"
+		content="Практическая работа на курсе 'Веб-Разроботчик' SkillFactory. Игра 'Угадайка!'">
+	<meta property="og:image" content="../img/game-guessing.png">
+	<meta property="og:url" content="">
+	<meta property="og:site_name" content="Игра 'Угадайка!'">
+	<meta name="twitter:card" content="summary">
+	<meta name="twitter:site" content="Анатолий">
+	<meta name="twitter:title" content="Игра 'Угадайка!'">
+	<meta name="twitter:description"
+		content="Практическая работа на курсе 'Веб-Разроботчик' SkillFactory. Игра 'Угадайка!'">
+	<meta name="twitter:image" content="../img/game-guessing.png">
+	<link rel="shortcut icon" href="./img/favicon.ico" type="image/x-icon">
+	<link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,400;0,700;1,400;1,700&display=swap"
+		rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css2?family=Reggae+One&display=swap" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@400;700&display=swap" rel="stylesheet">
+	<link rel="stylesheet" href="./css/style.css">
+	<title>Игра 'Угадайка!'</title>
+</head>
+
+<body>
+	<div class="wrapper">
+		<div class="page-content">
+
+			<header class="header">
+				<div class="header-logo">
+					<a class="header-logo__link" href="index.html" title="Обновить страницу">
+						<img src="../img/game-guessing.png" alt="logo">
+					</a>
+					<h1 class="header-logo__title">Игра 'Угадайка!'</h1>
+				</div>
+				<nav class="header-navigation">
+					<ul class="header-menu">
+						<li class="header-menu__item">
+							<a class="header-menu__link" href="../index.html" title="На главную">
+								<img src="../img/home.png" alt="home">
+							</a>
+						</li>
+						<li class="header-menu__item">
+							<a class="header-menu__link" href="../07_calculator/index.html" title="Калькулятор">
+								<img src="../img/calculator.png" alt="calc">
+							</a>
+						</li>
+						<li class="header-menu__item header-menu__item_game">
+							<a class="header-menu__link" href="#" title="Игра 'Угадайка!'">
+								<img src="../img/game-guessing.png" alt="game">
+							</a>
+						</li>
+						<li class="header-menu__item">
+							<a class="header-menu__link" href="#" title="Генератор случайных пользователей">
+								<img src="../img/users.png" alt="random">
+							</a>
+						</li>
+					</ul>
+				</nav>
+			</header>
+
+			<main class="content">
+				<article class="game">
+					<section class="game-card">
+						<h3 class="game-card__title">Вопрос №5</h3>
+						<div class="game-card-text">
+							<p>Вы загадали число</p>
+							<p><span>5</span>?</p>
+						</div>
+						<div class="game-card-buttons">
+							<button class="game-card__btn btn_blue">
+								<img src="./img/down_arrow.png" alt="down"> <span>Меньше</span>
+							</button>
+							<button class="game-card__btn btn_green">Верно !</button>
+							<button class="game-card__btn btn_blue">
+								<span>Больше</span> <img src="./img/up-arrow.png" alt="up">
+							</button>
+							<button class="game-card__btn btn_big">
+								<span>Заново</span>
+								<img src="./img/refresh-arrow.png" alt="replay">
+							</button>
+						</div>
+					</section>
+				</article>
+			</main>
+
+			<footer class="footer">
+				<nav class="footer-navigation">
+					<ul class="footer-navigation-links">
+						<li class="footer-navigation-links__item">
+							<a class="footer-navigation-links__link" href="#" target="_blank">
+								<img src="../img/vk-icon.png" alt="vk-logo">
+							</a>
+						</li>
+						<li class="footer-navigation-links__item">
+							<a class="footer-navigation-links__link" href="#" target="_blank">
+								<img src="../img/telegram-icon.png" alt="telegrem-logo">
+							</a>
+						</li>
+						<li class="footer-navigation-links__item">
+							<a class="footer-navigation-links__link" href="#" target="_blank">
+								<img src="../img/whatsapp-icon.png" alt="whatsapp-logo">
+							</a>
+						</li>
+						<li class="footer-navigation-links__item">
+							<a class="footer-navigation-links__link" href="#" target="_blank">
+								<img src="../img/github-icon.png" alt="github-logo">
+							</a>
+						</li>
+					</ul>
+				</nav>
+				<nav class="footer-menu">
+					<ul class="footer-menu-links">
+						<li class="footer-menu__item">
+							<a class="footer-menu__link" href="../index.html">На главную</a>
+						</li>
+						<li class="footer-menu__item">
+							<a class="footer-menu__link" href="../07_calculator/index.html">Онлайн калькулятор</a>
+						</li>
+						<li class="footer-menu__item">
+							<a class="footer-menu__link" href="#">Игра 'Угадайка!'</a>
+						</li>
+						<li class="footer-menu__item">
+							<a class="footer-menu__link" href="#" title="В разработке">
+								Генератор случайных пользователей
+							</a>
+						</li>
+					</ul>
+				</nav>
+				<div class="footer-text">
+					<p>&copy; 2022. <span>Игра 'Угадайка!'</span></p>
+				</div>
+			</footer>
+
+			<script src="./js/script.js"></script>
+
+		</div>
+	</div>
+</body>
+
+</html>
