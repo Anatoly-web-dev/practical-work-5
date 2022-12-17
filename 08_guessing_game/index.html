@@ -14,7 +14,7 @@
 	<meta property="og:title" content="Игра 'Угадайка!'">
 	<meta property="og:description"
 		content="Практическая работа на курсе 'Веб-Разроботчик' SkillFactory. Игра 'Угадайка!'">
-	<meta property="og:image" content="../img/game-guessing.png">
+	<meta property="og:image" content="./img/logo-icon.png">
 	<meta property="og:url" content="">
 	<meta property="og:site_name" content="Игра 'Угадайка!'">
 	<meta name="twitter:card" content="summary">
@@ -22,7 +22,7 @@
 	<meta name="twitter:title" content="Игра 'Угадайка!'">
 	<meta name="twitter:description"
 		content="Практическая работа на курсе 'Веб-Разроботчик' SkillFactory. Игра 'Угадайка!'">
-	<meta name="twitter:image" content="../img/game-guessing.png">
+	<meta name="twitter:image" content="./img/logo-icon.png">
 	<link rel="shortcut icon" href="./img/favicon.ico" type="image/x-icon">
 	<link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,400;0,700;1,400;1,700&display=swap"
 		rel="stylesheet">
@@ -39,7 +39,7 @@
 			<header class="header">
 				<div class="header-logo">
 					<a class="header-logo__link" href="index.html" title="Обновить страницу">
-						<img src="../img/game-guessing.png" alt="logo">
+						<img src="./img/logo-icon.png" alt="logo">
 					</a>
 					<h1 class="header-logo__title">Игра 'Угадайка!'</h1>
 				</div>
@@ -72,22 +72,20 @@
 			<main class="content">
 				<article class="game">
 					<section class="game-card">
-						<h3 class="game-card__title">Вопрос №5</h3>
+						<h3 class="game-card__title question">Попытка № <span id="attemptNumber">1</span></h3>
 						<div class="game-card-text">
-							<p>Вы загадали число</p>
-							<p><span>5</span>?</p>
+							<p id="answer">Вы загадали число <br> <span>5</span> ?</p>
 						</div>
 						<div class="game-card-buttons">
-							<button class="game-card__btn btn_blue">
+							<button class="game-card__btn btn_blue" id="btnLess">
 								<img src="./img/down_arrow.png" alt="down"> <span>Меньше</span>
 							</button>
-							<button class="game-card__btn btn_green">Верно !</button>
-							<button class="game-card__btn btn_blue">
+							<button class="game-card__btn btn_green" id="btnTrue">Верно !</button>
+							<button class="game-card__btn btn_blue" id="btnMore">
 								<span>Больше</span> <img src="./img/up-arrow.png" alt="up">
 							</button>
-							<button class="game-card__btn btn_big">
-								<span>Заново</span>
-								<img src="./img/refresh-arrow.png" alt="replay">
+							<button class="game-card__btn btn_big" id="btnReset">
+								<span>Заново</span> <img src="./img/refresh-arrow.png" alt="reset">
 							</button>
 						</div>
 					</section>
@@ -99,22 +97,22 @@
 					<ul class="footer-navigation-links">
 						<li class="footer-navigation-links__item">
 							<a class="footer-navigation-links__link" href="#" target="_blank">
-								<img src="../img/vk-icon.png" alt="vk-logo">
+								<img src="./img/vk-icon.png" alt="vk-logo">
 							</a>
 						</li>
 						<li class="footer-navigation-links__item">
 							<a class="footer-navigation-links__link" href="#" target="_blank">
-								<img src="../img/telegram-icon.png" alt="telegrem-logo">
+								<img src="./img/telegram-icon.png" alt="telegrem-logo">
 							</a>
 						</li>
 						<li class="footer-navigation-links__item">
 							<a class="footer-navigation-links__link" href="#" target="_blank">
-								<img src="../img/whatsapp-icon.png" alt="whatsapp-logo">
+								<img src="./img/whatsapp-icon.png" alt="whatsapp-logo">
 							</a>
 						</li>
 						<li class="footer-navigation-links__item">
 							<a class="footer-navigation-links__link" href="#" target="_blank">
-								<img src="../img/github-icon.png" alt="github-logo">
+								<img src="./img/github-icon.png" alt="github-logo">
 							</a>
 						</li>
 					</ul>
@@ -142,10 +140,32 @@
 				</div>
 			</footer>
 
-			<script src="./js/script.js"></script>
-
 		</div>
 	</div>
+
+	<div class="popup">
+		<div class="popup-container">
+			<div class="popup-content">
+				<fieldset class="popup-border">
+					<legend class="popup-border__title">Игра 'Угадайка!'</legend>
+					<form class="popup-form" action="#" method="dialog">
+						<p><label for="min">Минимальное значение:</label>
+							<input type="text" class="popup__input" id="min"></input>
+						</p>
+						<p><label for="max">Максимальное значение:</label>
+							<input type="text" class="popup__input" id="max"></input>
+						</p>
+						<p class="popup__message" id="message"></p>
+						<button class="popup__button" type="button" id="gameStartBtn">Начать игру!</button>
+					</form>
+					<div class="popup__close-btn" title="Закрыть">
+						<img src="./img/close.png" alt="X">
+					</div>
+				</fieldset>
+			</div>
+		</div>
+	</div>
+	<script src="./js/script.js"></script>
 </body>
 
 </html>
