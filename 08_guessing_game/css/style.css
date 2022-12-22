@@ -588,6 +588,16 @@ h6 {
 		justify-items: center;
 	}
 
+	.footer-menu__item {
+		font-size: 13px;
+	}
+
+	.footer-text {
+		align-self: center;
+		text-align: center;
+		font-size: 12px;
+	}
+
 }
 
 /*-------------------------------------- popup -----------------------------------------*/

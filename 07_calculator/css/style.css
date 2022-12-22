@@ -130,7 +130,6 @@ h6 {
 
 	padding: 10px 15px;
 	margin: 0 0 20px;
-
 }
 
 .header-logo {
@@ -568,8 +567,8 @@ h6 {
 	justify-content: center;
 	align-items: center;
 	column-gap: 200px;
-	letter-spacing: 1.3px;
 
+	letter-spacing: 1.3px;
 	background-color: rgba(10, 10, 10, 0.5);
 }
 
@@ -796,9 +795,7 @@ h6 {
 	}
 
 	.footer-text {
-		font-family: 'Roboto Slab', serif;
 		align-self: center;
-		font-style: italic;
 		text-align: center;
 		font-size: 12px;
 	}
@@ -844,6 +841,16 @@ h6 {
 		padding: 20px;
 		row-gap: 20px;
 		justify-items: center;
+	}
+
+	.footer-menu__item {
+		font-size: 13px;
+	}
+
+	.footer-text {
+		align-self: center;
+		text-align: center;
+		font-size: 12px;
 	}
 
 }

@@ -1,39 +1,152 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ru">
+
 <head>
-    <meta charset="UTF-8">
-    <title>Генератор случайных пользователей</title>
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
-          integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
-    <link href="https://fonts.googleapis.com/css2?family=Open+Sans" rel="stylesheet">
-    <link rel="stylesheet" href="style.css" type="text/css"/>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta name="description"
+		content="Практическая работа на курсе 'Веб-Разроботчик' SkillFactory. Генератор случайных пользователей">
+	<meta name="keywords"
+		content="Обучение, SkillFactory, JavaScript, практическая работа, базовый frontend, Генератор случайных пользователей">
+	<meta name="author" content="Анатолий Кострыкин">
+	<meta name="copyright" content="Анатолий Кострыкин">
+	<meta property="og:locale" content="ru_RU">
+	<meta property="og:type" content="article">
+	<meta property="og:title" content="Генератор случайных пользователей">
+	<meta property="og:description"
+		content="Практическая работа на курсе 'Веб-Разроботчик' SkillFactory. Генератор случайных пользователей">
+	<meta property="og:image" content="./img/users-logo.png">
+	<meta property="og:url" content="">
+	<meta property="og:site_name" content="Генератор случайных пользователей">
+	<meta name="twitter:card" content="summary">
+	<meta name="twitter:site" content="Анатолий">
+	<meta name="twitter:title" content="Генератор случайных пользователей">
+	<meta name="twitter:description"
+		content="Практическая работа на курсе 'Веб-Разроботчик' SkillFactory. Генератор случайных пользователей">
+	<meta name="twitter:image" content="./img/users-logo.png">
+	<link rel="shortcut icon" href="./img/favicon.ico" type="image/x-icon">
+	<link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,400;0,700;1,400;1,700&display=swap"
+		rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css2?family=El+Messiri:wght@400;700&display=swap" rel="stylesheet">
+	<link rel="stylesheet" href="./css/style.css">
+	<title>Генератор случайных пользователей</title>
 </head>
+
 <body>
-<div class="container">
-    <div class="row game-card align-items-center">
-        <div class="col col-md-6 offset-md-3">
-            <div class="card text-center">
-                <div class="card-header">
-                    <p class="m-0">Окно результатов генерации</p>
-                </div>
-                <div class="card-body">
-                    <div class="row">
-                        <div class="col">
-                            <h3 class="card-title"><span id="surnameOutput">Генерация фамилии</span></h3>
-                            <h4>Имя: <span id="firstNameOutput">Иван</span></h4>
-                            <p>
-                                <span id="genderOutput">Генерация пола</span>
-                                <span>, </span>
-                                <span id="birthYearOutput">Генерация года рождения</span>
-                            </p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-</div>
-<script src="personGenerator.js"></script>
-<script src="init.js"></script>
+	<div class="wrapper">
+		<div class="page-content">
+
+			<header class="header">
+				<div class="header-logo">
+					<a class="header-logo__link" href="index.html" title="Обновить страницу">
+						<img src="./img/users-logo.png" alt="logo">
+					</a>
+					<h1 class="header-logo__title">Генератор случайных пользователей</h1>
+				</div>
+				<nav class="header-navigation">
+					<ul class="header-menu">
+						<li class="header-menu__item">
+							<a class="header-menu__link" href="../index.html" title="На главную">
+								<img src="../img/home.png" alt="home">
+							</a>
+						</li>
+						<li class="header-menu__item">
+							<a class="header-menu__link" href="../07_calculator/index.html" title="Калькулятор">
+								<img src="../img/calculator.png" alt="calc">
+							</a>
+						</li>
+						<li class="header-menu__item header-menu__item_game">
+							<a class="header-menu__link" href="../08_guessing_game/index.html" title="Игра 'Угадайка!'">
+								<img src="../img/game-guessing.png" alt="game">
+							</a>
+						</li>
+						<li class="header-menu__item">
+							<a class="header-menu__link" href="#" title="Генератор случайных пользователей">
+								<img src="../img/users.png" alt="random">
+							</a>
+						</li>
+					</ul>
+				</nav>
+			</header>
+
+			<main class="content">
+				<article class="random-user-card">
+					<section class="card">
+						<h3 class="card__title">Окно результатов генерации</h3>
+						<div class="card-body">
+							<p>Фамилия: <span id="surnameOutput">фамилия</span></p>
+							<p>Имя: <span id="firstNameOutput">Иван</span></p>
+							<p>Отчество: <span id="patronymicOutput">отчество</span></p>
+							<p>Пол: <span id="genderOutput">пол</span></p>
+							<p>Дата рождения:
+								<span>
+									<span id="birthDayOutput">день</span>
+									<span id="birthMonthOutput">месяц</span>
+									<span id="birthYearOutput">год</span>
+								</span>
+							</p>
+							<p>Профессия: <span id="professionOutput">профессия</span></p>
+						</div>
+						<div class="card-buttons">
+							<button class="card-buttons__btn btn-green" id="btn-activate" type="button">Сгенерировать</button>
+							<button class="card-buttons__btn btn-red" id="btn-clear" type="button">Очистить</button>
+						</div>
+					</section>
+				</article>
+			</main>
+
+			<footer class="footer">
+				<nav class="footer-navigation">
+					<ul class="footer-navigation-links">
+						<li class="footer-navigation-links__item">
+							<a class="footer-navigation-links__link" href="#" target="_blank">
+								<img src="../img/vk-icon.png" alt="vk-logo">
+							</a>
+						</li>
+						<li class="footer-navigation-links__item">
+							<a class="footer-navigation-links__link" href="#" target="_blank">
+								<img src="../img/telegram-icon.png" alt="telegrem-logo">
+							</a>
+						</li>
+						<li class="footer-navigation-links__item">
+							<a class="footer-navigation-links__link" href="#" target="_blank">
+								<img src="../img/whatsapp-icon.png" alt="whatsapp-logo">
+							</a>
+						</li>
+						<li class="footer-navigation-links__item">
+							<a class="footer-navigation-links__link" href="#" target="_blank">
+								<img src="../img/github-icon.png" alt="github-logo">
+							</a>
+						</li>
+					</ul>
+				</nav>
+				<nav class="footer-menu">
+					<ul class="footer-menu-links">
+						<li class="footer-menu__item">
+							<a class="footer-menu__link" href="../index.html">На главную</a>
+						</li>
+						<li class="footer-menu__item">
+							<a class="footer-menu__link" href="../07_calculator/index.html">Онлайн калькулятор</a>
+						</li>
+						<li class="footer-menu__item">
+							<a class="footer-menu__link" href="../08_guessing_game/index.html">Игра 'Угадайка!'</a>
+						</li>
+						<li class="footer-menu__item">
+							<a class="footer-menu__link" href="#">
+								Генератор случайных пользователей
+							</a>
+						</li>
+					</ul>
+				</nav>
+				<div class="footer-text">
+					<p>&copy; 2022. <span>Генератор случайных пользователей</span></p>
+				</div>
+			</footer>
+
+		</div>
+	</div>
+	<script src="./js/personGenerator.js"></script>
+	<script src="./js/init.js"></script>
 </body>
+
 </html>
